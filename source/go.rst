@@ -10,7 +10,7 @@ Go
    :maxdepth: 2
    :caption: Contents:
 
-   go thema 1
+   einführung
 
 
 Indices and tables
