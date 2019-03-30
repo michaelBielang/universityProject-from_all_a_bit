@@ -2,7 +2,7 @@
 Objektorientierung ohne Klassen
 ===============================
 
-In der Programmiersprache Go gibt es keine Klassen und Vererbung. Durch die Kombination von Methoden, Kompositionen und Interface-Typen kann jedoch genauso objektorientiert werden wie mit anderen Programmiersprachen. 
+In der Programmiersprache Go gibt es keine Klassen und Vererbung. Durch die Kombination von Methoden, Kompositionen und Interface-Typen kann jedoch genauso objektorientiert programmiert werden wie mit anderen Programmiersprachen. 
 
 
 Typdefinition
@@ -46,7 +46,7 @@ Methoden bündeln Datentypen und Operationen und können wie Objekte genutzt wer
      c.radius += 1
    }
 
-Go verwendet die Call-by-Value-Semantik. Beim Aufruf der Methode werden die Parameter, hier der Circle, immer als Kopie übergeben. Die Änderung wird also nur auf eine Kope angewendet und der ursprungs Circle verändert sich nicht. Um den eigentlichen Parameter ändern zu können, muss man ihn als Pointer übergeben:
+Go verwendet die Call-by-Value-Semantik. Beim Aufruf der Methode werden die Parameter, hier der Circle, immer als Kopie übergeben. Die Änderung wird also nur auf eine Kope angewendet und der ursprungs Circle verändert sich nicht. Um den eigentlichen Parameter ändern zu können, muss man ihn als Pointer übergeben. Dies nennt man Call-by-Reference.
 
 .. code-block:: go
 
@@ -71,7 +71,7 @@ Ein Interface der Standardbibliothek ist ``Stringer`` aus dem Package ``fmt``:
 
 Jeder Typ der eine Methode ``String()`` enthält, implementiert also automatisch das Interface Stringer.
 
-Es gibt auch das leere Interface ``[i]interface{}``, welches keine Methoden implementiert. Dieses Interface wird von jedem Typ implementiert. Nützlich ist es für Typen bei denen die Struktur beim kompilieren noch nicht bekannt ist.
+Es gibt auch das leere Interface ``interface{}``, welches keine Methoden implementiert. Dieses Interface wird von jedem Typ implementiert. Nützlich ist es für Typen bei denen die Struktur beim kompilieren noch nicht bekannt ist.
 
 Bsp.: Objekt Typ Circle kann Variable Typ Shape zugeordnet werden weil er die Methoden implementiert hat:
 
@@ -91,8 +91,6 @@ Polymorphie:
 ````````````
 
 Go unterstützt auch Polymorphie, dadurch können Objekte unterschiedliche Datentypen gleichzeitig annehmen.
-
-Durch die Interfaces ermöglicht Go Polymorphie.
 
 
 
@@ -116,9 +114,9 @@ Der Typ ``Addr`` ist auch von außerhalb des Moduls zugreifbar, ``cidr`` wiederu
 
 
 
-Komposition: / Vererbung
+Komposition:
 ------------
-Vererbung wird in vielen Programmiersprachen für die Wiederverwendung von Vorhandenen Objektdefinition genutzt. In Go gibt es jedoch keine klassische Vererbung. Dies hat den Vorteil, dass es Änderungen im Programmcode deutlich einfacher macht. Beispielsweise haben wir eine Klasse ``Fluss`` die Klasse ``Wasser`` erbt. Wenn man nun etwas in der Klasse ``Wasser`` ändert, dann hat das unter Umständen Einfluss auf andere Klassen die die Klasse ``Wasser`` erben. Dann muss man alle Klassen die von "Wasser" erben anpassen, je nach Codeumfang kann das sehr aufwändig sein.
+Vererbung wird in vielen Programmiersprachen für die Wiederverwendung von Vorhandenen Objektdefinition genutzt. In Go gibt es jedoch keine klassische Vererbung. Dies hat den Vorteil, dass es Änderungen im Programmcode deutlich einfacher macht. Beispielsweise haben wir eine Klasse ``Fluss`` die die Klasse ``Wasser`` erbt. Wenn man nun etwas in der Klasse ``Wasser`` ändert, dann hat das unter Umständen Einfluss auf andere Klassen die die Klasse ``Wasser`` erben. Dann muss man alle Klassen die von "Wasser" erben anpassen, je nach Codeumfang kann das sehr aufwändig sein.
 
 Go unterstützt stattdessen eine Art der Einbettung. Eine Datenstruktur kann beliebig viele andere Datenstrukturen einbetten. So erhalten sie die Methoden und Attribute der eingebetteten Datenstrukturen.
 
@@ -194,11 +192,6 @@ Bsp.:
 
 
 
-
-
-
-
-
 Objekterzeugung:
 ----------------
 
@@ -217,8 +210,6 @@ Bsp:
 
 circle ist hier klein geschrieben, es ist also nur in seinem Package sichtbar und kann nicht von anderen Paketen mit ``new(shape.circle)`` erzeugt werden. Um trotzdem so ein Objekt zu instanziieren schreibt man ``shape.NewCircle(2)``.
 
-
-Zur Objekterzeugung kann auch ein Builder mit Fluent API verwendet werden. 
 
 
 Quellen:
