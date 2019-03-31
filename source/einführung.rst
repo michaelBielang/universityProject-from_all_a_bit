@@ -11,8 +11,11 @@ Am 10. November 2009 wurde dann Go als open source Projekt veröffentlicht.
 Wenn man von Go redet darf man natürlich auch das Maskotchen "Go gopher" vergessen um das es einen regelrechten Hype gibt.
 Wer Go kennt, der kennt auch Go gopher (anders herum ist das warscheinlich nicht immer der Fall).
 
-:numref:`figlabel`
-.. _figlabel: [Go gopher] mit seinem Drawing Sheet
+.. _figlabel:
+
+.. figure:: img/modelsheet.jpg
+
+[Go gopher] mit seinem Drawing Sheet
 
 
 Warum Go?
