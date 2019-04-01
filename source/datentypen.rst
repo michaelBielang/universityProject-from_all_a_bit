@@ -107,6 +107,7 @@ je nach dem ob ein Eintrag mit dem gegebenen Schlüssel existiert oder nicht.
 Um zu testen ob ein Eintrag existiert kann man einen Unterstrich verwernden:
 
 .. code-block:: go
+
     _, ok := m["a"] // ok == true
     
 Die Methode delete erlaubt das löschen eines Eintrags.
@@ -121,6 +122,7 @@ Iterieren
 Das Schlüsselwort range erlaubt es einem über eine Map zu iterieren.
 
 ..code-block:: go
+
     for key, value := range m {
         fmt.Println("Key:", key, "Value:", value)
     }
@@ -133,6 +135,7 @@ Map of Map
 Maps können auch mit structs verwendet werden:
 
 .. code-block:: go
+
     produkte := make(map[string]map[string]int)
     
 In dem gegebenen Beispiel wird eine Map Mit dem Schlüsseltypen string und dem Wertypen map[string]int erstellt.
@@ -145,6 +148,7 @@ Arrays
 Ein Array mit Elementen des Typens T der Größe n wird mit dem Typen [n]T dargestellt.
 
 .. code-block:: go
+
     var a [10]int
     
 übernommen von [4]_
@@ -154,6 +158,7 @@ deklariert a zu einem 10 großem integer array.
 Die größe eines Arrays ist unveränderlich.
 
 .. code-block:: go
+
     var a [2]int
     a[0] = 100
     a[1] = 300
@@ -162,12 +167,14 @@ Die größe eines Arrays ist unveränderlich.
 Ein Array kann auch direkt befüllt werden:
 
 .. code-block:: go
+
     staedte := [4]string{"Bremen", "Hamburg", "New York", "Amsterdam"}
     fmt.Println(staedte[2]) //New York
 
 Die Größe des Arrays kann einfach mit der Methode len herausgefunden werden:
 
 .. code-block:: go
+
     fmt.Println(len(staedte)) //4
     
 Slices
@@ -181,6 +188,7 @@ Eine Slice mit Elementen des Types T wird mit dem Typen []T angegeben.
 Eine Slice wird mit Hilfe zweier Grenzwerte erstellt.
 
 .. code-block:: go
+
     a[lower : upper]
     
 Der Wert lower ist inclusiv der Wert upper ist exclusiv.
@@ -189,6 +197,7 @@ Ohne lower beginnt die Slice bei 0, ohne upper endet sie beim letzten Element de
 Wenn man beides weglässt erhält man eine Slice die exact den Array wiederspiegelt.
 
 .. code-block:: go
+
     staedte := [4]string{"Bremen", "Hamburg", "New York", "Amsterdam"}
     var s []string = staedte[:2]
     fmt.Println(s) // [Bremen Hamburg]
@@ -197,12 +206,14 @@ Slices enthalten keine Daten, sie beschreiben jediglich einen Teil des Arrays.
 Wenn man Werte im Array ändert, ändern sich dies auch in der Slice
 
 .. code-block:: go
+
     staedte[0] = "Munich"
     fmt.Println(s) // [Munich Hamburg]
     
 Eine Slice kann auch ohne einen Array direkt mit Werten initalisiert werden.
 
 .. code-block:: go
+
     a := [2]int{2,3}
     s := []int{2,3}
     
@@ -219,6 +230,7 @@ Die Länge und Kapazität der Slice s können mit Hilfe der Methoden len(s) und 
 So lang man genügend Kapazität hat lässt sich die länge der Slice beliebig ändern.
 
 .. code-block:: go
+
     s := []{0, 4, 5, 6, 7, 8} // länge und kapazität 6
     
     s = s[:0] // 0 länge
