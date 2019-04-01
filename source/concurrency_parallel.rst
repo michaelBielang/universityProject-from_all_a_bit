@@ -3,10 +3,11 @@
    <p />
 
 Nebenläufigkeit vs. Parallelität
-===============================
+================================
 
 Einführung Parallelität vs. Sequenzialität
---------------
+------------------------------------------
+
 Es gibt Geschehen, die echt parallel ausgeführt werden können und bei manchen Dingen sieht es so aus, als ob sie parallel passieren, aber in Wirklichkeit passiert es nur schnell hintereinander. 
 
 Wenn zwei Menschen etwa gleichzeitig essen, ist das parallel. 
@@ -15,7 +16,7 @@ Aber wenn jemand isst und atmet, so sieht das von außen zwar gleichzeitig aus, 
  
 
 Nebenläufigkeit und Parallelität in der EDV
---------------
+-------------------------------------------
 
 Moderne Computersysteme können Parallelität sowie Nebenläufigkeit u.a. in Multicore-Systemen, Netzwerken, Betriebssystemen und auch schon in kleinen Programmen realisieren. Im weiteren Verlauf dieses Berichts liefere ich Ihnen anschauliche Beispiele zu diesem Thema.
 
@@ -25,7 +26,7 @@ Nebenläufigkeit hingegen kann einen Programmteil auf einem Prozessor umsetzen. 
 
 
 Nebenläufigkeit und Parallelität in Go
---------------
+--------------------------------------
 
 Rob Pike [4]_, Chefentwickler der Programmiersprache Go bei Google, hat sich speziell diesem Thema auf mehreren Veranstaltungen gewidmet. 
 
@@ -41,18 +42,20 @@ Go arbeitet dabei nach dem Prinzip kommuniziere nicht über Speicherteilung, son
 
 
 Googles Definition von Nebenläufigkeit
---------------
+--------------------------------------
+
 "Programming as the composition of independently executing processes
 (Process in general sense, not Linux processes. Famously hard to define) [2]_
 
 
 Googles Definition von Parallelität
---------------
+-----------------------------------
+
 Programming as the simultaneous execution of (possibly related) computations. [2]_
 
 
 **Nebenläufigkeit** anhand eines Beispiels
---------------
+------------------------------------------
 
 
 .. code-block:: go
@@ -131,7 +134,7 @@ so ändert sich zwar die Reihenfolge in der Ausgabe, an der Programmlogik hingeg
 Es ist lediglich der Scheduler der hier die Rechenzeiten an Aufgaben verteilt die sofort zur Abarbeitung bereitstehen.
 
 **Parallelität** anhand eines Beispiels
---------------
+---------------------------------------
 
 Nun füge ich mittels dem Befehl ``runtime.GOMAXPROCS(2)`` dem Programm einen zweiten logischen Prozessor hinzu, sodass sich der Programmcode wie folgt darstellt:
 
@@ -192,7 +195,7 @@ Wie man nun sehen kann arbeiten die beiden Routinen parallel und ringen um die K
 Daraus folgt, dass die Ergebnisse jedes mal anders aussehen können. 
 
 Abschlussbemerkung
---------------
+------------------
 
 Insbesondere bei parallel arbeitenden Programmen ist darauf zu achten, dass Operationen auf gemeinsam genutzte Variablen stets atomar vollzogen werden um race-conditions und daraus resultierende Fehler zu vermeiden. 
 
