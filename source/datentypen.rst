@@ -61,6 +61,7 @@ Typ der Schlüssel (Im Beispiel a) und des Wertes (Im Beispiel b) müssen expliz
 Alternativ kann man eine Map direkt mit Daten initialisieren:
 
 .. code-block:: go
+
     produkte := map[int]string{
         5598: "Milch",
         77567: "Butter",
@@ -70,6 +71,7 @@ Alternativ kann man eine Map direkt mit Daten initialisieren:
 Dies kann auch verwendet werden um die make Methode zu umgehen:
 
 .. code-block:: go
+
     m := map[string]int{}
 
 
