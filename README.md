@@ -13,7 +13,7 @@ Prof. Dr. Hubert Högl \
 3. Michael Bielang, #222222, INF6, <@hs-augsburg.de>
 4. Mirjam Lawall, #2003849, INF6, <Mirjam.Lawall@hs-augsburg.de>
 
-Berichte im HTML Format: 
+Berichte im HTML Format: http://www.hs-augsburg.de/~bufe4777
 GIT Repository: https://r-n-d.informatik.hs-augsburg.de:8080/dva/berichte-2019/51
 
 
