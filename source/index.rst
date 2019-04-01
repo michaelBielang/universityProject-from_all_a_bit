@@ -6,10 +6,10 @@
 DVA Bericht Gruppe 51
 =======================================
 
-Hochschule Augsburg 
-Fakultät für Informatik 
-Sommersemester 2019 
-Prof. Dr. Hubert Högl \
+| Hochschule Augsburg 
+| Fakultät für Informatik 
+| Sommersemester 2019 
+| Prof. Dr. Hubert Högl \
 
 Autoren:
 
