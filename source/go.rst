@@ -11,6 +11,8 @@ Go
    :caption: Contents:
 
    einführung
+   objektorientierung
+   datentypen
 
 
 Indices and tables
