@@ -13,6 +13,7 @@ Go
    einführung
    objektorientierung
    datentypen
+   concurrency_parallel
 
 
 Indices and tables
