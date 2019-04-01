@@ -244,13 +244,13 @@ Quellen
 
 .. [0] Go Lang Basic types (besucht am 01.04.2019)  
     https://tour.golang.org/basics/11
-.. [1] Go Lang Basic types zero values (besucht am 01.04.2019)  
+Go Lang Basic types zero values (besucht am 01.04.2019)  
     https://tour.golang.org/basics/12
-.. [2] Go Lang Basic types conversion (besucht am 01.04.2019)  
+Go Lang Basic types conversion (besucht am 01.04.2019)  
     https://tour.golang.org/basics/13
 .. [3] go maps in action (besucht am 01.04.2019)  
     https://blog.golang.org/go-maps-in-action
 .. [4] Array (besucht am 01.04.2019)
     https://tour.golang.org/moretypes/6
-.. [5] Slices (besucht am 01.04.2019)
+Slices (besucht am 01.04.2019)
     https://tour.golang.org/moretypes/7
