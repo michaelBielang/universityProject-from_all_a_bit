@@ -3,8 +3,21 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to dva bericht's documentation!
+DVA Bericht Gruppe 51
 =======================================
+
+Hochschule Augsburg 
+Fakultät für Informatik 
+Sommersemester 2019 
+Prof. Dr. Hubert Högl \
+
+Autoren:
+
+1. Felix Bühler, #2008336, INF6, <felix.buehler@hs-augsburg.de>
+2. Tobias Druecke, #2004114, INF6, <tobias.drueeke@hs-augsburg.de>
+3. Michael Bielang, #222222, INF6, <@hs-augsburg.de>
+4. Mirjam Lawall, #2003849, INF6, <Mirjam.Lawall@hs-augsburg.de>
+
 
 .. toctree::
    :maxdepth: 2
