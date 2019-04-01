@@ -15,7 +15,7 @@ Autoren:
 
 1. Felix Bühler, #2008336, INF6, <felix.buehler@hs-augsburg.de>
 2. Tobias Druecke, #2004114, INF6, <tobias.drueeke@hs-augsburg.de>
-3. Michael Bielang, #222222, INF6, <@hs-augsburg.de>
+3. Michael Bielang, #2036823, INF6, <michael.bielang@hs-augsburg.de>
 4. Mirjam Lawall, #2003849, INF6, <Mirjam.Lawall@hs-augsburg.de>
 
 
