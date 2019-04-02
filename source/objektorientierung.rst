@@ -1,3 +1,4 @@
+| Mirjam Lawall, <Mirjam.Lawall@hs-augsburg.de>, IN6, #2003849
 
 Objektorientierung ohne Klassen
 ===============================

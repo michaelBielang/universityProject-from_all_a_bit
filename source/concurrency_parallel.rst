@@ -1,3 +1,6 @@
+| Michael Bielang, <Michael.Bielang@hs-augsburg.de>, IN6, #2036823
+
+
 .. |p| raw:: html
 
    <p />
