@@ -8,7 +8,7 @@ Bereits 2007 haben Robert Griesemer, Rob Pike und Ken Thompson begonnen die Ziel
 Ian Taylor begann auch 2008, allerdings unabhängig, für das Go front end eine GNU Compiler Collection zu spezifizieren. Ende des Jahres begann Russ Cox dann zu helfen die Progammiersprache und Bibliotheken mit umzusetzen.
 Am 10. November 2009 wurde dann Go als open source Projekt veröffentlicht.
 
-Wenn man von Go redet darf man natürlich auch das Maskotchen "Go gopher" vergessen um das es einen regelrechten Hype gibt.
+Wenn man von Go redet darf man natürlich auch das Maskotchen "Go gopher" nicht vergessen um das es einen regelrechten Hype gibt.
 Wer Go kennt, der kennt auch Go gopher (anders herum ist das warscheinlich nicht immer der Fall).
 
 .. _figlabel:
@@ -19,10 +19,10 @@ Wer Go kennt, der kennt auch Go gopher (anders herum ist das warscheinlich nicht
 
 
 Warum Go?
-=========
+---------
 
 Warum eine neue Progammiersprache? 
-----------------------------------
+``````````````````````````````````
 Schon vor 10 Jahren, als die Entwicklung von Go begonnen hat, gab es eine große Auswahl an Progammiersprachen. Allerdings hatte jede Sprache ihre Vor- und Nachteile und
 keine stellte die Entwickler von Go so richtig zufrieden. Bei der Auswahl einer Sprache musste man immer gewisse Abstriche machen.
 Man konnte sich entscheiden zwischen Effizienz bei der Ausführung, Effizienz bei der Compilierung oder einer komfortablen Programmierung.
@@ -31,7 +31,7 @@ Zudem bieten die wenigsten Sprachen eine effiziente und zuverlässige Unterstüt
 
 
 Was macht dann jetzt Go?
-------------------------
+````````````````````````
  Bei der Entwicklung von Go wurde nach dem [Language Design] besonders versucht folgende Schmerzpunkte zu adressieren:
  
  - langsame builds
@@ -64,16 +64,16 @@ compiled code runs close to the speed of C. Go is designed to let you move fast.
 
 
 Entwickeln mit Go
-=================
+-----------------
 
 Runtime
--------
+```````
 Die Laufzeitumgebung ist Teil von jedem Go Programm. In diese sind Garbage Collection, Nebenläufigkeit, Stack management und ander wichtige Features von Go implementiert.
 Das Gos Laufzeitumgebung, im Gegensatz zu anderen Sprachen wie Java, keine virtuelle Maschine zur Ausführung verwendet ist ein wichtiges Detail welches bei der wahl der Sprache verstanden werden sollte.
 Die Go Programme sind bereits in nativen Maschienencode kompiliert. Daher ist in Go der Begriff "Runtime" als eine Bibliothek mit wichtigen Services zu sehen anstatt der eigentlichen Bedeutung der virtuellen Umgebung. 
 
 IDE's zu Entwicklung
---------------------
+````````````````````
 Für die Entwicklung mit Go ist keine spezielle IDE angedacht, allerdings unerstützen die meisten etablierten IDE entweder direkt oder mit einem Plugin die Entwicklung mit Go.
 
 IDE's/Editoren mit Go unterstützung:
@@ -87,41 +87,42 @@ IDE's/Editoren mit Go unterstützung:
 - und viele weitere
 
 basics
-------
+``````
 Ist Go eigentlich eine Objektorientierte Sprache? Auf diese Frage gibt es keine eindeutige Antwort. Go erlaubt mit Typen und Methoden zwar Objektorientierung, allerding gibt es wiederum keine feste Typhierachie.
 Es gibt zwar den Ansatz eines Interfaces, jedoch wird dieser offener gehalten. Es gibt keine feste implentierung eines definierten Interfaces. Viel mehr kann ein Type einem Interface zugewiesen werden wenn es die definierten Methoden beinhaltet.
 Metaphorisch gesprochen: Es wächst wie eine Banane, riecht wie eine Banane und schmeckt wie eine Banane dann wird es wohl eine Banane sein.
 
 Weitere signifikante Unterschied zu anderen Programmiersprachen sind, dass es Beispielsweise keine wirklichen Exceptions gibt, Threads in goroutines gehandelt werden, überladen nicht erlaubt ist und vielen weitere kleine aber entscheidende Unterschiede.
 
-kleiner einblick in syntax/ besonderheiten
-------------------------------------------
+kleiner einblick in Syntax/ Besonderheiten
+``````````````````````````````````````````
 
 Bei der Programmierung mit Go ist es wichtig gewisse Syntaxkonventionen einzuhalten (besonder bei den Zeichen "go func() { for { dst <- <-src } }()").
 
 Kommentare
-``````````
-Block Kommentare: /* <Comment> */
+..........
+Block Kommentare: /* <Comment> */ 
+
 Zeilen Kommentare: // <Comment>
 
 Zugriffsmodifikator
-```````````````````
+...................
 Private: duck (camel case)
 Public: Duck (pascal case)
 
 Grammatik
-`````````
+.........
 ; Semikolons werden automatisch bei Verarbeiten hinzugefügt. Dadurch wird allerding für den Code eine gewisse Syntax vorausgesetzt. Nur in wenigen Ausnahmen werden noch Semikolons benötigt (z.B. bei einer "for" Schleife zur abtrennung).
 := ist eine Deklarierung
 =  ist eine Zuweisung
 
 Instanziierung
-``````````````
+..............
 Speicher Allokieren: new
 Inizialisierung des slice, map und channel types: make
 
 Kontrollstrukturen
-``````````````````
+..................
 if
 
 .. code-block:: go
@@ -145,7 +146,7 @@ switch
     return 0
 
 Schleifen
-`````````
+.........
 
 .. code-block:: go
 
@@ -156,7 +157,7 @@ Schleifen
 	for condition { }
 
 Funktionen
-``````````
+..........
 Definition
 
 .. code-block:: go
@@ -175,7 +176,7 @@ Aufruf
 Über die [Tour of Go] lässt sich ein umfassender und spielerischer Einstieg in Go finden, mit Syntax und besonderheiten.
 	
 hello world
------------
+```````````
 
 .. code-block:: go
 
@@ -191,11 +192,19 @@ Einen ersten Einblick in die Programmierung mit Go (wie "Hello Wolrd") kann man 
 
 
 
+Quellen:
+--------
 
 https://golang.org/doc/faq
+
 https://golang.org/doc/effective_go.html
+
 [Tour of Go] https://tour.golang.org
+
 [Go Playground] https://play.golang.org/p/-MKUWeDBml7
+
 [Blogeintrag] https://techcrunch.com/2009/11/10/google-go-language/?guccounter=1&guce_referrer_us=aHR0cHM6Ly9kZS53aWtpcGVkaWEub3JnLw&guce_referrer_cs=84Pa_kv4lIYv9fLLImg_9w
-[Go gopher] https://golang.org/doc/gopher/modelsheet.jpg
+
+[Go] https://golang.org/doc/gopher/modelsheet.jpg
+
 [Language Design] https://talks.golang.org/2012/splash.article

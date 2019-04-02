@@ -123,7 +123,7 @@ Iterieren
 
 Das Schlüsselwort range erlaubt es einem über eine Map zu iterieren.
 
-..code-block:: go
+.. code-block:: go
 
     for key, value := range m {
         fmt.Println("Key:", key, "Value:", value)
