@@ -13,7 +13,7 @@ Wer Go kennt, der kennt auch Go gopher (anders herum ist das warscheinlich nicht
 
 .. _figlabel:
 
-.. figure:: img/modelsheet.jpg
+.. figure:: ./img/modelsheet.jpg
 
 [Go gopher] mit seinem Drawing Sheet
 
