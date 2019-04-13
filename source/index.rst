@@ -23,7 +23,7 @@ Autoren:
    :maxdepth: 2
    :caption: Contents:
    
-   go
+   go/go
 
 
 
