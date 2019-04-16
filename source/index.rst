@@ -27,7 +27,6 @@ Autoren:
    docker/docker
 
 
-
 Indices and tables
 ==================
 
