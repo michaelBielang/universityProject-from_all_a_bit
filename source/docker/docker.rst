@@ -11,6 +11,8 @@ Docker
    :caption: Contents:
 
    einfuehrung
+   netzwerke
+   java
 
 
 Indices and tables
