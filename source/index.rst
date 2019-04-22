@@ -25,6 +25,7 @@ Autoren:
    
    go/go
    docker/docker
+   quant/quant
 
 
 Indices and tables
