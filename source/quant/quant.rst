@@ -10,7 +10,7 @@ Quantencomputer
    :maxdepth: 2
    :caption: Contents:
 
-
+    qc_hardware
 
 Indices and tables
 ==================
