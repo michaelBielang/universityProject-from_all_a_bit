@@ -11,6 +11,7 @@ Quantencomputer
 	:caption: Contents:
 
 	qc_einführung
+	qc_rechnen
 	qc_hardware
 	qc_gebaut
 

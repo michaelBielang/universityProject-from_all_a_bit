@@ -78,7 +78,7 @@ Viele Naturphänomene sind zu komplex, um sie in Computermodellen darzustellen. 
 ''''''''''''''''''''''
 
 4.1 Deutsch-Jozsa-Algorithmus
-..........................
+.............................
 Mit dem Deutsch-Jozsa-Algorithmus kann bestimmt werden, ob eine auf einem Bit operierende Funktion konstant oder balanciert ist. 1985 beschäftigte sich David Deutsch mit diesem Problem (Problem von Deutsch, 1 Eingabebit). 1992 verallgemeinerten dann Deutsch und Jozsa die Idee (Problem von Deutsch-Josza, beliebig viele Eingabebits). Dieser Algorithmus hat keinen praktischen Nutzen. Aber er ist der erste Quantenalgorithmus, der eine Aufgabe nachweislich schneller löst, als ein klassischer Algorithmus. Klassische Algorithmen benötigen im worst case ``2^n-1 + 1`` Aufrufe, während ein Quantencomputer mit dem Deutsch-Jozsa-Algorithmus nur einen einzigen Aufruf benötigt. Dieser Algorithmus diente auch als Basis für den Shor-Algorithmus und den Grover-Algorithmus. 
 
 4.2 Simon-Algorithmus
@@ -88,7 +88,7 @@ Der Simon-Algorithmus findet die Periode p einer periodischen Funktion f. Er wur
 
 
 Nachteil: (besser mit herkömmlichen Computern)
------------------------------------------------
+----------------------------------------------
 Aufgaben, die eine sequentielle Arbeitsweise erfordern.
 
  
