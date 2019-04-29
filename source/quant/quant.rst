@@ -13,6 +13,8 @@ Quantencomputer
     qc_einführung
     qc_hardware
 
+    IBM_Q
+
 Indices and tables
 ==================
 
