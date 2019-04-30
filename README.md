@@ -1,9 +1,9 @@
 # DVA Praktikum für Informatiker
 
-| Hochschule Augsburg 
-| Fakultät für Informatik 
-| Sommersemester 2019 
-| Prof. Dr. Hubert Högl 
+Hochschule Augsburg  
+Fakultät für Informatik  
+Sommersemester 2019  
+Prof. Dr. Hubert Högl  
 
 **Gruppe: 2, Team: 51**
 
