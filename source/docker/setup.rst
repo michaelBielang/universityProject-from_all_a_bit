@@ -13,11 +13,11 @@ Im weiteren Verlauf wird die Windows Version untersucht.
 
 
 Installation prüfen
----------
+-------------------
 
 Um die Installation zu prüfen sollte der Nutzer zunächst ``docker info`` in die Windows-Shell eingeben. Dies ermöglicht dem Nutzer zu prüfen, ob die Docker-Enginge läuft und auch die Path erweiterungen richtig installiert wurde. Der Nutzer sollte dann in etwa folgendes ausgegeben bekommen:
 
-.. code-block:: go
+.. code-block:: yml
 
 	PS D:\Git\DVA Praktikum\Docker> docker info
 	Containers: 1
@@ -71,7 +71,7 @@ Um die Installation zu prüfen sollte der Nutzer zunächst ``docker info`` in di
 
 
 Das erste Docker Image 
----------
+----------------------
 
 Docker hat wie auch Git, dass Feature über die Kommandokonsole ein Image runterzuladen.
 
