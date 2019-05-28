@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<level spawnX="0" spawnY="0">
+	<box height="7" x="-1"></box>
+	<box x="0" y="-1" width="44"></box>
+	<box x="-1" y="-1"></box>
+	<box x="-1" y="7"></box>
+	<box y="7" width="44"></box>
+	<box x="44" y="7"></box>
+	<box height="7" x="44"></box>
+	<box x="44" y="-1"></box>
+	<triangle x="8" y="0" kills="true">
+		<point></point>
+		<point x="1"></point>
+		<point x="0.5" y="1"></point></triangle>
+	<triangle x="14" y="0" kills="true">
+		<point></point>
+		<point x="1"></point>
+		<point x="0.5" y="1"></point></triangle>
+	<triangle x="17" y="0" kills="true">
+		<point></point>
+		<point x="1"></point>
+		<point x="0.5" y="1"></point></triangle>
+		<checkpoint x="19"></checkpoint>
+	<triangle x="22" y="0" kills="true">
+		<point></point>
+		<point x="1"></point>
+		<point x="0.5" y="1"></point></triangle>
+	<triangle x="23" y="0" kills="true">
+		<point></point>
+		<point x="1"></point>
+		<point x="0.5" y="1"></point></triangle>
+	<triangle x="24" y="0" kills="true">
+		<point></point>
+		<point x="1"></point>
+		<point x="0.5" y="1"></point></triangle>
+	<triangle x="25" y="0" kills="true">
+		<point></point>
+		<point x="1"></point>
+		<point x="0.5" y="1"></point></triangle>
+	<box x="30" width="2" height="2"></box>
+	<box x="32" width="2" height="3"></box>
+	<triangle x="30" y="6" kills="true">
+		<point y="1"></point>
+		<point x="1" y="1"></point>
+		<point x="0.5"></point></triangle>
+	<triangle x="31" y="6" kills="true">
+		<point y="1"></point>
+		<point x="1" y="1"></point>
+		<point x="0.5"></point></triangle>
+	<triangle x="32" y="6" kills="true">
+		<point y="1"></point>
+		<point x="1" y="1"></point>
+		<point x="0.5"></point></triangle>
+	<triangle x="33" y="6" kills="true">
+		<point y="1"></point>
+		<point x="1" y="1"></point>
+		<point x="0.5"></point></triangle>
+	<goal x="43">
+		<drawable type="solid_color" g="256"></drawable></goal>
+	
+</level>
