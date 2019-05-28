@@ -3,15 +3,18 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Node
+Libgdx
 =======================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   node_MF
-   node_MT
+   libgdx
+   projekt_setup
+   scene2d
+   box2d
+   beispiel
 
 
 Indices and tables
