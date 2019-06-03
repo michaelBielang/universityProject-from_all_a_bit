@@ -7,6 +7,7 @@ Beschreibung
 ------------
 
 Der Spieler steuert ein Quadrat und muss mit diesem das Ziel des Levels erreichen.
+Mit a und d bewegt sich der Charakter nach links bzw. rechts und mit der Leertaste kann er springen.
 
 Ein Level wird jeweils aus einer XML-Datei geladen.
 
@@ -16,7 +17,7 @@ Weiterhin kann ein Level Checkpoints besitzen, welche den Respawnpunkt des Spiel
 
 Die Recht- und Dreiecke die das Levle definieren können mithilfe des Attributs `kills` den Spieler töten.
 
-Auch lässt sich die Farbe der einzelnen Levelbausteine ändern
+Auch lässt sich die Farbe der einzelnen Levelbausteine ändern.
 
 link zur jar_.
 

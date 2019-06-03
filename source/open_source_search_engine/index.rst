@@ -7,8 +7,10 @@ search engines
 
 
    daten
-   datenbank   
-
+   datenbank  
+   engine_basics
+   solr
+   elasticsearch
    elasticsearch_example
    
 
