@@ -1,0 +1,13 @@
+package elastic_file_indexer.rest_client;
+
+import org.apache.http.HttpHost;
+import org.elasticsearch.client.RestClient;
+import org.elasticsearch.client.RestHighLevelClient;
+
+public class RestClientFactory {
+
+	public static RestHighLevelClient createRestClient() {
+		return new RestHighLevelClient(RestClient.builder(new HttpHost("localhost", 9200, "http")));
+	}
+
+}

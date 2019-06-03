@@ -1,0 +1,19 @@
+package elastic_file_indexer.helper;
+
+public class FileCrawler {
+	 
+	   public static void dirTree(File dir) {
+	      File[] subdirs=dir.listFiles();
+	      for(File subdir: subdirs) {
+	         if (subdir.isDirectory()) {
+	            dirTree(subdir);
+	         } else {
+	            doFile(subdir);
+	         }
+	      }
+	   }
+	 
+	   public static void doFile(File file) {
+	      System.out.println(file.getAbsolutePath());
+	   }
+}

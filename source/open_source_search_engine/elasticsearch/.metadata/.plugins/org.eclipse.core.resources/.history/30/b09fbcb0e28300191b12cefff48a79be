@@ -1,0 +1,13 @@
+package elastic_file_indexer.worker;
+
+import org.elasticsearch.client.RestHighLevelClient;
+
+import elastic_file_indexer.rest_client.RestClientFactory;
+
+public class AbstractWorker {
+	protected RestHighLevelClient client;
+
+	public public AbstractWorker() {
+		 this.client = RestClientFactory.createRestClient();
+	}
+}

@@ -1,0 +1,59 @@
+package elastic_file_indexer.document;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+
+public class Document {
+
+	private String path;
+	private LocalDateTime creationTime;
+	private LocalDateTime lasAccessTime;
+	private LocalDateTime lasModifiedTime;
+	private long size;
+	
+	public String getPath() {
+		return path;
+	}
+	public void setPath(String path) {
+		this.path = path;
+	}
+	public LocalDateTime getCreationTime() {
+		return creationTime;
+	}
+	public void setCreationTime(LocalDateTime creationTime) {
+		this.creationTime = creationTime;
+	}
+	public LocalDateTime getLasAccessTime() {
+		return lasAccessTime;
+	}
+	public void setLasAccessTime(LocalDateTime lasAccessTime) {
+		this.lasAccessTime = lasAccessTime;
+	}
+	public LocalDateTime getLasModifiedTime() {
+		return lasModifiedTime;
+	}
+	public void setLasModifiedTime(LocalDateTime lasModifiedTime) {
+		this.lasModifiedTime = lasModifiedTime;
+	}
+	public long getSize() {
+		return size;
+	}
+	public void setSize(long size) {
+		this.size = size;
+	}
+	
+	public String toString() {
+		return new StringBuffer().append("path: ").append(this.path).
+			append("creationTime: " ).append(this.parseDate(this.creationTime)).
+			append("lastAccessTime: ").append(this.parseDate(this.lasAccessTime)).
+			append("creationTime: " ).append(this.parseDate(this.creationTime)).
+			append("size: " ).append(this.size/1000).append(" KB").toString();
+		
+	}
+	
+	private String parseDate(LocalDateTime date) {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
+		return date.format(formatter);
+	}
+}

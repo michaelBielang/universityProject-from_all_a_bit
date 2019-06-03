@@ -1,0 +1,51 @@
+package elastic_file_indexer.worker;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.attribute.BasicFileAttributes;
+import java.util.Date;
+
+import org.elasticsearch.action.index.IndexRequest;
+import org.elasticsearch.client.RequestOptions;
+import org.elasticsearch.common.xcontent.XContentBuilder;
+import org.elasticsearch.common.xcontent.XContentFactory;
+
+import elastic_file_indexer.helper.FileCrawler;
+
+public class Indexer extends AbstractWorker{
+	private int id = 1;
+
+	public Indexer() {
+		 super();
+	}
+	
+	public void indexFilesInPath(String path) {
+		File dir = new File(path);
+		FileCrawler.dirTree(dir).forEach(file -> addFile(file));
+	}
+	
+	private void addFile(File file) {
+		try {
+			XContentBuilder builder = XContentFactory.jsonBuilder();
+			BasicFileAttributes attr = null;
+			
+				attr = Files.readAttributes(file.toPath(), BasicFileAttributes.class);
+			builder.startObject();
+			{
+			    builder.field("path", file.getAbsolutePath());
+			    builder.timeField("creationTime",  new Date(attr.creationTime().toMillis()));
+			    builder.timeField("lastAccessTime",  new Date(attr.lastAccessTime().toMillis()));
+			    builder.timeField("lastModifiedTime",  new Date(attr.lastModifiedTime().toMillis()));
+			    builder.field("size", attr.size());
+			}
+			builder.endObject();
+			IndexRequest indexRequest = new IndexRequest("simple_files")
+			    .id(String.valueOf(id++)).source(builder);		
+			System.out.println(this.client.index(indexRequest, RequestOptions.DEFAULT).status());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
