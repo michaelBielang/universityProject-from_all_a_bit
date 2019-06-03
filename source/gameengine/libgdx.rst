@@ -4,6 +4,7 @@ Libgdx
 Libgdx ist ein Java-Framework für plattformunabhängige Spieleentwicklung. 
 Als Open-Source-Software unter der Apache-2.0-Lizenz veröffentlichte Mario Zechner die Engine erstmals 2010. 
 Der Name libGDX hat laut des des Entwicklers keine bestimmte Bedeutung.
+Es lassen sich sowohl 3D als auch 2D Spiele mit der Engine entwickeln.
 Heute lässt sich mit Hilfe der Engine ein Spiel gleichzeitig auf Windows, Linux, Mac OS, Android, Blackberry, iOS und dem Webbrowser ausführen.
 [0]_
 
