@@ -11,6 +11,7 @@ Libgdx
    :caption: Contents:
 
    libgdx
+   developed
    projekt_setup
    scene2d
    box2d
