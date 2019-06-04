@@ -39,7 +39,7 @@ Erste Schritte
 
 Nachdem man sich Elasticsearch heruntergeladen und entpackt hat, kann man den Server direkt über das "elasticsearch" Script im bin Verzeichnis starten.
 
-..  code-block:: sudo
+::
 
 	elasticsearch
 	
@@ -67,5 +67,6 @@ In die Konsole wir anschließend ausgeloggt mit welchen Parametern und Konfigura
 
 Quellen
 -------
-..  elastic search
+
+elastic search
 	https://www.elastic.co

@@ -43,5 +43,6 @@ Bei einer Suche spielen andere Faktoren zusätzlich eine Rolle. Sucht man in uns
 
 Quellen
 -------
-..	Elasticsearch Tutorial for Beginners
+
+Elasticsearch Tutorial for Beginners
 	https://www.youtube.com/watch?v=C3tlMqaNSaI

@@ -69,13 +69,14 @@ Die meisten NoSQL Datenbanken haben ihre eigenen Querysyntax. Dies wurde über d
 
 Quellen
 -------	
-..  Datentransformationen in NoSQL-Datenbanken
+
+Datentransformationen in NoSQL-Datenbanken
 	https://kluedo.ub.uni-kl.de/frontdoor/deliver/index/docId/4829/file/_Dissertation_Johannes_Schildgen.pdf
 	
-..  Big Data, SQL und NoSQL – eine kurze Übersicht
+Big Data, SQL und NoSQL – eine kurze Übersicht
 	https://www.bigdata-insider.de/big-data-sql-und-nosql-eine-kurze-uebersicht-a-602249/
 	
-..  Why SQL is beating NoSQL, and what this means for the future of data
+Why SQL is beating NoSQL, and what this means for the future of data
 	https://blog.timescale.com/why-sql-beating-nosql-what-this-means-for-future-of-data-time-series-database-348b777b847a/
 
-..  Skript Business Intelligence - Prof. Dr. Nikolaus Nüssigmann
+Skript Business Intelligence - Prof. Dr. Nikolaus Nüssigmann

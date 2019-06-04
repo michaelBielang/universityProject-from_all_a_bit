@@ -74,10 +74,10 @@ Konsumverhalten, ...).
 Quellen
 -------
 
-..  Weltweite Datenmengen sollen bis 2025 auf 175 Zetabytes wachsen
+Weltweite Datenmengen sollen bis 2025 auf 175 Zetabytes wachsen
 	https://blog.wiwo.de/look-at-it/2018/11/27/weltweite-datenmengen-sollen-bis-2025-auf-175-zetabyte-wachsen-8-mal-so-viel-wie-2017/
 	
-..  Big Data
+Big Data
     https://de.wikipedia.org/wiki/Big_Data
 	
-..  Skript Business Intelligence - Prof. Dr. Nikolaus Nüssigmann
+Skript Business Intelligence - Prof. Dr. Nikolaus Nüssigmann

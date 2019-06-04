@@ -18,7 +18,6 @@ Der Start mit Solr ist relativ einfach. Nachdem man Solr runter geladen hat star
 
 Danach kann man die Webview des Serves unter standart Einstellungen unter "localhost:8983/solr" erreichen. Jede weiteren Befehle und Kommunikation mit dem Server würd über HTTP Request gehandelt. Für uns als Benutzer bietet sich die komfortablere Webview an bzw. als Programmierer haben wir in den meisten Sprachen Frameworks, welche uns wiederkehrenden Overhead ersparen.
 
-.. _figlabel:
 .. figure:: ./img/solr_main.PNG
 	
 Der initiale Solr Server ist komplett leer und besitzt keine Konfigurationen. Bevor wir Daten Indexieren können müssen wir einen Core erstellen. Ein Core entspricht einem Index welcher spezifisch konfiguriert werden kann. Cores befinden sich bei dem normalen (nicht Cloud Modus) unter \server\solr. Ein Core besteht grundlegend aus folgenden Dateien 
@@ -44,10 +43,12 @@ Dokumente hinzufügen
 Ist der Core erstellt kann man über die den Tab "Documents" einfach Dokumente hinzufügen. Beispielsweise fügen wir 3 Bücher hinzu.
 
 ..  code-block:: json
-
+	
+	[
 	{"id":"0060248025","name":"Falling Up","inStock": true,"author": "Shel Silverstein"},
 	{"id":"0679805273","name":"Oh, all the Places You'll Go","inStock": true,"author": "Dr. Seuss"},
 	{"id":"0679805586","name":"Open source it all","inStock": false,"author": "Community"}
+	]
 	
 .. figure:: ./img/solr_add_document.PNG
 	
@@ -78,5 +79,5 @@ Dieser relativ kurz gehaltene Einblick zeigt nur die Spitze des Eisbergs. Solr k
 Quellen
 -------
 
-..  solr quick overview
+solr quick overview
 	https://lucene.apache.org/solr/guide/7_7/
