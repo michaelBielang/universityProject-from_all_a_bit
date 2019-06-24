@@ -1,0 +1,5 @@
+package elastic_file_indexer.helper;
+
+public class FileCrawler {
+
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.apache.http.HttpHost"/>
+<fullyQualifiedTypeName name="org.elasticsearch.client.RestClient"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.util.function.Function"/>
+<fullyQualifiedTypeName name="elastic_file_indexer.indexer.Indexer"/>
+<fullyQualifiedTypeName name="org.elasticsearch.client.RestHighLevelClient"/>
+<fullyQualifiedTypeName name="java.nio.file.Files"/>
+<fullyQualifiedTypeName name="java.nio.file.attribute.BasicFileAttributes"/>
+<fullyQualifiedTypeName name="org.elasticsearch.common.xcontent.XContentType"/>
+<fullyQualifiedTypeName name="org.elasticsearch.common.xcontent.XContentFactory"/>
+<fullyQualifiedTypeName name="org.elasticsearch.action.index.IndexRequest"/>
+<fullyQualifiedTypeName name="org.elasticsearch.common.xcontent.XContentBuilder"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.lang.AbstractMethodError"/>
+<fullyQualifiedTypeName name="org.elasticsearch.action.get.GetRequest"/>
+<fullyQualifiedTypeName name="org.elasticsearch.action.get.GetResponse"/>
+<fullyQualifiedTypeName name="org.elasticsearch.ElasticsearchException"/>
+<fullyQualifiedTypeName name="org.elasticsearch.rest.RestStatus"/>
+<fullyQualifiedTypeName name="org.elasticsearch.search.builder.SearchSourceBuilder"/>
+<fullyQualifiedTypeName name="org.elasticsearch.index.query.QueryBuilders"/>
+<fullyQualifiedTypeName name="org.elasticsearch.search.aggregations.AggregationBuilders"/>
+<fullyQualifiedTypeName name="org.elasticsearch.action.search.SearchRequest"/>
+<fullyQualifiedTypeName name="org.elasticsearch.action.search.SearchResponse"/>
+<fullyQualifiedTypeName name="org.elasticsearch.client.RequestOptions"/>
+<fullyQualifiedTypeName name="elastic_file_indexer.worker.QueryWorker"/>
+<fullyQualifiedTypeName name="org.elasticsearch.search.SearchHits"/>
+<fullyQualifiedTypeName name="elastic_file_indexer.worker.AbstractWorker"/>
+<fullyQualifiedTypeName name="elastic_file_indexer.helper.FileCrawler"/>
+<fullyQualifiedTypeName name="elastic_file_indexer.rest_client.RestClientFactory"/>
+<fullyQualifiedTypeName name="org.elasticsearch.action.main.MainResponse"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.time.LocalDate"/>
+<fullyQualifiedTypeName name="java.time.ZoneOffset"/>
+<fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="org.joda.time.LocalDateTime"/>
+<fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+<fullyQualifiedTypeName name="elastic_file_indexer.document.Document"/>
+<fullyQualifiedTypeName name="org.joda.time.Instant"/>
+<fullyQualifiedTypeName name="java.time.Instant"/>
+</qualifiedTypeNameHistroy>

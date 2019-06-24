@@ -1,0 +1,25 @@
+package elastic_file_indexer.worker;
+
+import java.io.IOException;
+
+import org.elasticsearch.client.RestHighLevelClient;
+
+
+public class AbstractWorker {
+	
+	protected RestHighLevelClient client;
+
+	public AbstractWorker() {
+		 this.client = RestClientFactory.createRestClient();
+	}
+	
+	 protected void finalize() 
+	  {
+			try {
+				client.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	  }
+}

@@ -1,0 +1,5 @@
+package elastic_file_indexer.document;
+
+public class Document {
+
+}

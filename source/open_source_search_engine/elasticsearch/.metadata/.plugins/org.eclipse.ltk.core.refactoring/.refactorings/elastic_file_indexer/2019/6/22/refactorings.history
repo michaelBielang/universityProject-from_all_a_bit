@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;dirTree&apos; from expression &apos;FileCrawler.dirTree(dir)&apos;&#x0D;&#x0A;- Original project: &apos;elastic_file_indexer&apos;&#x0D;&#x0A;- Variable name: &apos;dirTree&apos;&#x0D;&#x0A;- Destination method: &apos;elastic_file_indexer.worker.Indexer.indexFilesInPath()&apos;&#x0D;&#x0A;- Variable expression: &apos;FileCrawler.dirTree(dir)&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;dirTree&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/main\/src&lt;elastic_file_indexer.worker{Indexer.java" name="dirTree" replace="true" selection="697 24" stamp="1559480650819" varType="false" version="1.0"/>
+</session>

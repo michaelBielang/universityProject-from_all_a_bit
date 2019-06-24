@@ -1,0 +1,45 @@
+package elastic_file_indexer.cli;
+
+import java.util.List;
+import java.util.Scanner;
+
+import elastic_file_indexer.document.Document;
+import elastic_file_indexer.worker.Indexer;
+import elastic_file_indexer.worker.QueryWorker;
+
+public class IndexerCLI {
+
+	public static void main(String[] args) {
+		System.out.println(
+				"Aus welchem Pfad sollen die Dateien Indexiert werden? (x um diesen Schritt zu überspringen.)");
+		Scanner scanned = new Scanner(System.in);
+		String path = scanned.nextLine();
+		if (!path.equals("x")) {
+			Indexer indexer = new Indexer();
+			System.out.println("Indexierung wird gestartet.");
+			int fileCount = indexer.indexFilesInPath(path);
+			System.out.println(fileCount + " Files wurden indexiert");
+		}
+
+		QueryWorker queryWorker = new QueryWorker();
+		System.out.println("ClusterStatus: " + queryWorker.clusterInfo());
+		System.out.println("###################################################");
+		System.out.println("All indexed Files: ");
+		queryWorker.queryAllDocuments().forEach(doc -> System.out.println(doc));
+
+		boolean continueQueries = true;
+
+		while (continueQueries) {
+			System.out.println("Probiere deine Query (q um es zu beenden): ");
+			String query = scanned.nextLine();
+			continueQueries = !query.equals("q");
+			if (continueQueries) {
+				List<Document> hits = queryWorker.querySpecific(query);
+				hits.size()>0 ? hits.forEach(doc -> System.out.println(doc)) : System.out.println("No Hits.");
+			}
+		}
+		scanned.close();
+		System.exit(0);
+	}
+
+}

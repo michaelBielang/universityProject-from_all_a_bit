@@ -1,0 +1,21 @@
+package elastic_file_indexer.helper;
+
+import java.io.File;
+import java.util.LinkedList;
+import java.util.List;
+
+public class FileCrawler {
+
+	public static List<File> dirTree(File dir) {
+		File[] subdirs = dir.listFiles();
+		List<File> files = new LinkedList<File>();
+		for (File subdir : subdirs) {
+			if (subdir.isDirectory()) {
+				files.addAll(dirTree(subdir));
+			} else {
+				files.add(subdir);
+			}
+		}
+		return files;
+	}
+}

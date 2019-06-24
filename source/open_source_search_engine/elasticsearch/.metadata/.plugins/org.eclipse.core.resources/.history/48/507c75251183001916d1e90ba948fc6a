@@ -1,0 +1,10 @@
+package elastic_file_indexer.cli;
+
+public class IndexerCLI {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

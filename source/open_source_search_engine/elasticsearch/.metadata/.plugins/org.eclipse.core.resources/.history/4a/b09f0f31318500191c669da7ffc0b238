@@ -1,0 +1,11 @@
+package elastic_file_indexer.document;
+
+import java.util.Date;
+
+public class Document {
+
+	private String path;
+	private Date creationTime;
+	private Date lasAccessTime;
+	private Date lasModifiedTime;
+}

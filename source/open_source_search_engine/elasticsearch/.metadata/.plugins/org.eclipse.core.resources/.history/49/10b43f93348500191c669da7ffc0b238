@@ -1,0 +1,58 @@
+package elastic_file_indexer.document;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+
+public class Document {
+
+	private String path;
+	private Date creationTime;
+	private Date lasAccessTime;
+	private Date lasModifiedTime;
+	private long size;
+	
+	public String getPath() {
+		return path;
+	}
+	public void setPath(String path) {
+		this.path = path;
+	}
+	public Date getCreationTime() {
+		return creationTime;
+	}
+	public void setCreationTime(Date creationTime) {
+		this.creationTime = creationTime;
+	}
+	public Date getLasAccessTime() {
+		return lasAccessTime;
+	}
+	public void setLasAccessTime(Date lasAccessTime) {
+		this.lasAccessTime = lasAccessTime;
+	}
+	public Date getLasModifiedTime() {
+		return lasModifiedTime;
+	}
+	public void setLasModifiedTime(Date lasModifiedTime) {
+		this.lasModifiedTime = lasModifiedTime;
+	}
+	public long getSize() {
+		return size;
+	}
+	public void setSize(long size) {
+		this.size = size;
+	}
+	
+	public String toString() {
+		StringBuffer buffer = new StringBuffer();
+		buffer.append("path: " + this.path).
+			append("creationTime: " ).
+			append(this.creationTime.)
+		
+	}
+	
+	private String parseDate(LocalDateTime date) {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
+		return date.format(formatter);
+	}
+}

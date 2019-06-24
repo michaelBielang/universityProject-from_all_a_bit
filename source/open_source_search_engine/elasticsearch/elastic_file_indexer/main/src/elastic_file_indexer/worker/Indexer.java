@@ -1,0 +1,57 @@
+package elastic_file_indexer.worker;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.attribute.BasicFileAttributes;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
+import java.util.List;
+
+import org.elasticsearch.action.index.IndexRequest;
+import org.elasticsearch.client.RequestOptions;
+import org.elasticsearch.common.xcontent.XContentBuilder;
+import org.elasticsearch.common.xcontent.XContentFactory;
+
+import elastic_file_indexer.helper.FileCrawler;
+
+public class Indexer extends AbstractWorker {
+	private int id = 1;
+
+	public Indexer() {
+		super();
+	}
+
+	public int indexFilesInPath(String path) {
+		File dir = new File(path);
+		List<File> dirTree = FileCrawler.dirTree(dir);
+		dirTree.forEach(file -> addFile(file));
+		return dirTree.size();
+	}
+
+	private void addFile(File file) {
+		try {
+			XContentBuilder builder = XContentFactory.jsonBuilder();
+			BasicFileAttributes attr = null;
+
+			attr = Files.readAttributes(file.toPath(), BasicFileAttributes.class);
+			builder.startObject();
+			{
+				builder.field("path", file.getAbsolutePath());
+				builder.timeField("creationTime",
+						LocalDateTime.ofInstant(attr.creationTime().toInstant(), ZoneOffset.systemDefault()));
+				builder.timeField("lastAccessTime",
+						LocalDateTime.ofInstant(attr.lastAccessTime().toInstant(), ZoneOffset.systemDefault()));
+				builder.timeField("lastModifiedTime",
+						LocalDateTime.ofInstant(attr.lastModifiedTime().toInstant(), ZoneOffset.systemDefault()));
+				builder.field("size", attr.size());
+			}
+			builder.endObject();
+			IndexRequest indexRequest = new IndexRequest("simple_files").id(String.valueOf(id++)).source(builder);
+			this.client.index(indexRequest, RequestOptions.DEFAULT);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,9 @@
+package elastic_file_indexer.document;
+
+public class Document {
+
+	private String path;
+	private Date creationTime;
+	private Date lasAccessTime;
+	private Date lasModifiedTime;
+}
