@@ -1,0 +1,9 @@
+[package]
+name = "hello-rust"
+version = "0.1.0"
+authors = ["tobdrue <tobias.drueeke@hs-augsburg.de>"]
+edition = "2018"
+
+[dependencies]
+rand="0.6.5"
+threadpool = "1.7.1"

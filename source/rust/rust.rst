@@ -7,15 +7,16 @@ Rust
 =======================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+	:maxdepth: 2
+	:caption: Contents:
 
-	einführung
-    syntax
+	einfuehrung
+	syntax
+	rust_in_der_praxis
 
 
 Indices and tables
-==================
+------------------
 
 * :ref:`genindex`
 * :ref:`modindex`
