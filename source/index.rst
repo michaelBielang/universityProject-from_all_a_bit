@@ -29,6 +29,7 @@ Autoren:
    node/node
    gameengine/gameengine
    open_source_search_engine/index
+   rust/rust
 
 
 Indices and tables

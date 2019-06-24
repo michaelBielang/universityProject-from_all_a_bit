@@ -10,7 +10,7 @@ Dropbox
 
 Dropbox, der Filehosting-Dienstanbieter, hat 2016 mit Rust eine der wohl entscheidendsten  Veränderungen ihrer Firmengeschichte geschafft. Dropbox bietet Usern ein in der Cloud gespeichertes und zu den Benutzer Computern synchronisiertes Dateisystem. Dabei wurde die Amazon Cloud im Hintergrund als Datencenter verwendet. 2014 wurde dann begonnen ein lokales Datencenter zu entwerfen, um die über 500 Petabyte zukünftig komplett selbst verwalten zu können. Zur Speicherung der Daten hat Dropbox ein neues System namens Diskotech entwickelt. Der geschlossene Block kann dabei ca. 1 Petabyte an Daten speichern, ist extrem kompakt und lässt dabei einzelne HDD's bei einem Partitionsausfall einfach und schnell austauschen. Das zuvor für die Amazon Cloud entwickelte System Magic Pocket musste dann für die neuen Discotechs neu geschrieben werden. Zuerst hatte das Dropboxteam mit Go begonnen. Nach einem Jahr haben sie allerdings schmerzlich feststellen müssen, dass sie mit Go erhebliche Speicherprobleme haben und diese nicht in den Griff bekommen. Gerade da Dropbox einen sehr hohen Durchsatz an Daten hat, wird der Speicher für den Transfer benötigt. Mit Rust wurde dann ein neuer Versucht gestartet. Dieser konnte erfolgreich fertig gestellt werden und ist seither im produktiven Einsatz. Seit 2016 sind rund 90% der Daten von Dropbox erfolgreich in das hausinterne Datahouse mit der neuen Software umgezogen.
 
-.. figure:: ./img/dropbox_discotech.jpg
+.. figure:: img/dropbox_discotech.jpg
 
 
 npm
@@ -37,6 +37,7 @@ writing code vs writing rust
 Man kann Rust code ähnlich wie anderen Programmiersprachen mit den typischen Bedingungen und Schleifen schreiben.
 
 ..  code-block:: rust
+
 	let mut result: u64 = 0;
     let mut i: u64 = 0;
     loop {
@@ -53,6 +54,7 @@ Man kann Rust code ähnlich wie anderen Programmiersprachen mit den typischen Be
 Allerdings ist das nicht der performanteste und eleganteste Weg. Die 10 Zeilen Code lassen sich auf eine Zeile reduzieren. Dies wird wohl einer der Gründe gewesen sein weshalb das npm team 1 Woche gebraucht hat ihre Autorisierung umzusetzten. 
 
 ..  code-block:: rust
+
 	pub fn euler_six_nine_div_sum(max: u64) -> u64 {
 		(0..max).filter(|n| n % 6 == 0 || n % 9 == 0).sum()
 	}
@@ -67,6 +69,7 @@ testing
 Schreibt man Code der eine gewisse Robustheit haben soll (und das nachweisbar), kommt man selten über Tests hinaus. Für Tests kann man einfach eine normale Funktion schrieben und diese als Test annotieren. Standartmäßig sind dann auch alle gängigen Assertions aufrufbar. Mit "cargo test" werden alle Tests ausgeführt.
 
 ..  code-block:: rust
+
 	#[test]
 	fn test_normal_euler() {
 		let value = euler_six_nine_div_sum(13);
@@ -81,6 +84,7 @@ documenting
 Ein weiterer wichtiger Baustein bei lebendigem und wachsendem Code ist eine Dokumentation. Mit drei Slashes definiert man generelle Kommentare die in die Dokumentation gefasst werden. Mit "//!" werden Module dokumentiert. Über "cargo doc" wird dann die Dokumentation erstellt. Bei der erstellung der Dokumentation kann noch als Parameter angegeben werden, dass Dependency Dokumentation nicht mit übernommen wird und sich das erstellte Dokument öffnen soll ("cargo doc --no-deps --open").
 
 ..  code-block:: rust
+
 	/// a typical euler problem to sum up all number to a given max where the value is devidable by 6 or by 9
 	/// implemented in rust style
 	pub fn euler_six_nine_div_sum(max: u64) -> u64 {
