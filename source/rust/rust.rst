@@ -13,6 +13,7 @@ Rust
 	einfuehrung
 	syntax
 	rust_in_der_praxis
+	beispiel
 
 
 Indices and tables
